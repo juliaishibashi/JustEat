@@ -1,0 +1,18 @@
+services:
+  - name: justeat-backend
+    type: web
+    runtime: docker
+    rootDir: backend
+    dockerfilePath: ./backend/Dockerfile
+    healthCheckPath: /health
+
+  - name: justeat-frontend
+    type: web
+    runtime: node
+    rootDir: frontend
+    buildCommand: npm ci && npm run build
+    startCommand: npm run start
+
+databases:
+  - name: justeat-db
+``
