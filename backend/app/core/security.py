@@ -7,6 +7,7 @@ from jose import JWTError, jwt
 SECRET_KEY = os.getenv("SECRET_KEY")
 ALGORITHM = os.getenv("ALGORITHM", "HS256")
 ACCESS_TOKEN_EXPIRE_MINUTES = int(os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES", "60"))
+DATABASE_URL=postgresql://justeat_db_l3ps_user:33ZEvCfTSj9r9JBIekCx0YS3X3N7TFMX@dpg-d7ktrtosfn5c73cqg720-a/justeat_db_l3ps
 
 if not SECRET_KEY:
     raise ValueError("SECRET_KEY environment variable is not set")
